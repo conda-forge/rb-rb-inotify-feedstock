@@ -1,5 +1,5 @@
 {% set name = "rb-inotify" %}
-{% set version = "0.10.0" %}
+{% set version = "0.10.1" %}
 
 package:
   name: rb-{{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
-  sha256: 4481d9ce69159774be31215d10917684413ad3416b2018bdd8dc9b976a8747bb
+  sha256: 050062d4f31d307cca52c3f6a7f4b946df8de25fc4bd373e1a5142e41034a7ca
 
 build:
   noarch: generic
-  number: 1
+  number: 0
   script:
     - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
